@@ -87,13 +87,6 @@ export default function Footer() {
                 letterSpacing: "0.08em",
                 marginBottom: 20,
               }}>Kontakt</p>
-              <p style={{
-                fontFamily: "var(--font-body), sans-serif",
-                fontSize: 14,
-                color: "#777",
-                marginBottom: 16,
-                lineHeight: 1.5,
-              }}>michael.dik.md<br />@gmail.com</p>
               <a
                 href="#kontakt"
                 onMouseEnter={() => setCtaHover(true)}
