@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Leistungen from "./components/Leistungen";
-import Referenzen from "./components/Referenzen";
 import Pakete from "./components/Pakete";
 import Ablauf from "./components/Ablauf";
 import Kontakt from "./components/Kontakt";
@@ -13,7 +12,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Leistungen />
-      <Referenzen />
       <Pakete />
       <Ablauf />
       <Kontakt />
