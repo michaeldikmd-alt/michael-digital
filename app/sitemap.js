@@ -1,4 +1,4 @@
-const BASE = "https://michael-digital.vercel.app";
+const BASE = "https://siegen-web.de";
 
 export default function sitemap() {
   return [

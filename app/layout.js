@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "Siegen Web — Handwerker-Websites in Siegen-Wittgenstein",
     description: "Professionelle Website + Google Business für Handwerksbetriebe. Ab 600€ einmalig, fertig in 1 Woche.",
-    url: "https://michael-digital.vercel.app",
+    url: "https://siegen-web.de",
     type: "website",
     siteName: "Siegen Web",
   },
