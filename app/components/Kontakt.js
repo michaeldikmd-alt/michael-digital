@@ -42,7 +42,7 @@ export default function Kontakt() {
 
       setGesendet(true);
     } catch (err) {
-      setFehler("Etwas ist schiefgelaufen. Bitte schreib mir direkt an michael.dik.md@gmail.com");
+      setFehler("Etwas ist schiefgelaufen. Bitte schreib mir direkt an info@siegen-web.de");
     } finally {
       setLaden(false);
     }

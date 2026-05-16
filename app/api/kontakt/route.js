@@ -57,7 +57,7 @@ export async function POST(request) {
 
   const { error } = await resend.emails.send({
     from: "Kontaktformular <onboarding@resend.dev>",
-    to: "michael.dik.md@gmail.com",
+    to: "info@siegen-web.de",
     replyTo: undefined,
     subject: `Neue Anfrage von ${name.trim()} – ${betrieb.trim()}`,
     html: `

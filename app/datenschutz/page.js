@@ -45,7 +45,7 @@ export default function Datenschutz() {
               Michael Dik<br />
               Gleiwitzer Straße 4<br />
               57072 Siegen<br />
-              E-Mail: michael.dik.md@gmail.com<br />
+              E-Mail: info@siegen-web.de<br />
               Telefon: 01575 2987113
             </p>
           </Section>
@@ -124,7 +124,7 @@ export default function Datenschutz() {
               <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
             </ul>
             <p style={{ marginTop: 12 }}>
-              Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: michael.dik.md@gmail.com
+              Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: info@siegen-web.de
             </p>
           </Section>
 

@@ -37,7 +37,7 @@ const jsonLd = {
     "addressCountry": "DE",
   },
   "areaServed": "Siegen-Wittgenstein",
-  "email": "michael.dik.md@gmail.com",
+  "email": "info@siegen-web.de",
   "telephone": "+4915752987113",
 };
 

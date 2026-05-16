@@ -37,7 +37,7 @@ export default function Impressum() {
 
           <Section title="Kontakt">
             <Row label="Telefon" value="01575 2987113" />
-            <Row label="E-Mail" value="michael.dik.md@gmail.com" />
+            <Row label="E-Mail" value="info@siegen-web.de" />
           </Section>
 
           <Section title="Steuerliche Angaben">
