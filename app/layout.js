@@ -14,21 +14,21 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  title: "Handwerker Website Siegen-Wittgenstein | Michael Digital",
+  title: "Siegen Web — Handwerker-Websites in Siegen-Wittgenstein",
   description: "Professionelle Websites für Handwerksbetriebe in Siegen-Wittgenstein. Google Business Einrichtung inklusive. Ab 600€, fertig in 1 Woche. Jetzt kostenlos anfragen.",
   openGraph: {
-    title: "Michael Digital — Handwerker-Websites in Siegen-Wittgenstein",
+    title: "Siegen Web — Handwerker-Websites in Siegen-Wittgenstein",
     description: "Professionelle Website + Google Business für Handwerksbetriebe. Ab 600€ einmalig, fertig in 1 Woche.",
     url: "https://michael-digital.vercel.app",
     type: "website",
-    siteName: "Michael Digital",
+    siteName: "Siegen Web",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Michael Digital",
+  "name": "Siegen Web",
   "description": "Professionelle Websites für Handwerksbetriebe",
   "address": {
     "@type": "PostalAddress",

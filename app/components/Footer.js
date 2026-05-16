@@ -38,7 +38,7 @@ export default function Footer() {
               color: "#fff",
               marginBottom: 12,
             }}>
-              Michael<span style={{ color: "var(--accent)" }}>.</span>digital
+              Siegen Web
             </div>
             <p style={{
               fontFamily: "var(--font-body), sans-serif",
@@ -136,7 +136,7 @@ export default function Footer() {
             fontSize: 13,
             color: "#444",
           }}>
-            © {new Date().getFullYear()} Michael Digital. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Siegen Web. Alle Rechte vorbehalten.
           </p>
           <div style={{ display: "flex", gap: 20 }}>
             {["Impressum", "Datenschutz"].map((link) => (

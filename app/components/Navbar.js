@@ -63,7 +63,7 @@ export default function Navbar() {
             color: "#111",
             flexShrink: 0,
           }}>
-            Michael<span style={{ color: "var(--accent)" }}>.</span>digital
+            Siegen Web
           </a>
 
           {!isMobile && (
