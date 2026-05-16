@@ -28,7 +28,7 @@ const leistungen = [
   {
     Icon: Lightning,
     titel: "Schnelle Umsetzung",
-    text: "Vom ersten Gespräch zur fertigen Website in 2 Wochen. Kein Hin-und-Her, kein Warten.",
+    text: "Vom ersten Gespräch zur fertigen Website in 1 Woche. Kein Hin-und-Her, kein Warten.",
   },
   {
     Icon: Wrench,

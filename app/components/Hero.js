@@ -79,7 +79,7 @@ export default function Hero() {
             maxWidth: 440,
             margin: isMobile ? "0 auto 44px" : "0 0 44px",
           }}>
-            Ich baue professionelle Websites für Handwerksbetriebe — schnell, günstig und ohne technischen Aufwand für dich. Einfach anfragen und in 2 Wochen live gehen.
+            Ich baue professionelle Websites für Handwerksbetriebe — schnell, günstig und ohne technischen Aufwand für dich. Einfach anfragen und in 1 Woche live gehen.
           </p>
 
           {/* CTA buttons */}
@@ -294,7 +294,7 @@ export default function Hero() {
         alignItems: isMobile ? "center" : "flex-start",
       }}>
         {[
-          { zahl: "2 Wo.", label: "bis zur fertigen Website" },
+          { zahl: "1 Wo.", label: "bis zur fertigen Website" },
           { zahl: "100%", label: "Handwerker-Fokus" },
           { zahl: "fest", label: "Preise, keine Überraschungen" },
         ].map(({ zahl, label }) => (
