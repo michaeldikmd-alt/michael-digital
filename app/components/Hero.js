@@ -66,9 +66,9 @@ export default function Hero() {
             maxWidth: isMobile ? "none" : 540,
             margin: isMobile ? "0 auto 20px" : "0 0 20px",
           }}>
-            Dein Betrieb.<br />
-            <span style={{ color: "var(--accent)" }}>Online sichtbar.</span><br />
-            Kunden gewinnen.
+            Der Spezialist für<br />
+            <span style={{ color: "var(--accent)" }}>Handwerker-Websites</span><br />
+            in Siegen-Wittgenstein.
           </h1>
 
           <p style={{
@@ -79,7 +79,7 @@ export default function Hero() {
             maxWidth: 440,
             margin: isMobile ? "0 auto 44px" : "0 0 44px",
           }}>
-            Ich baue professionelle Websites für Handwerksbetriebe — schnell, unkompliziert und ohne technischen Aufwand für dich. Einfach anfragen und in 1 Woche live gehen.
+            Ich mache das. Website, Google Business und monatliche Betreuung — ein Paket, ein Preis, fertig in 1 Woche. Du kümmerst dich um deinen Betrieb. Ich mache den Rest.
           </p>
 
           {/* CTA buttons */}
@@ -149,7 +149,7 @@ export default function Hero() {
                 transform: secondaryPressed ? "scale(0.97)" : "scale(1)",
               }}
             >
-              Pakete ansehen
+              Angebot ansehen
             </a>
           </div>
         </div>
@@ -296,7 +296,7 @@ export default function Hero() {
         {[
           { zahl: "1 Wo.", label: "bis zur fertigen Website" },
           { zahl: "100%", label: "Handwerker-Fokus" },
-          { zahl: "fest", label: "Preise, keine Überraschungen" },
+          { zahl: "1", label: "Paket. Kein Menü, keine Auswahl." },
         ].map(({ zahl, label }) => (
           <div key={label} style={{ textAlign: isMobile ? "center" : "left" }}>
             <div style={{

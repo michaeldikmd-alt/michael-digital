@@ -4,41 +4,29 @@ import {
   Globe,
   MapPin,
   EnvelopeSimple,
-  Lightning,
   Wrench,
-  DeviceMobile,
 } from "@phosphor-icons/react";
 
 const leistungen = [
   {
     Icon: Globe,
     titel: "Professionelle Website",
-    text: "Mobile-optimiert, schnell ladend, mit deinem Logo, Fotos und Texten. Kunden finden dich — auf jedem Gerät.",
+    text: "Mobile-optimiert, schnell, mit deinem Logo, Fotos und Texten. Fertig in 1 Woche — nicht in 3 Monaten.",
   },
   {
     Icon: MapPin,
-    titel: "Google-Präsenz",
-    text: "Google Business Profil einrichten und optimieren, damit du bei lokalen Suchen ganz oben auftauchst.",
+    titel: "Google Business Profil",
+    text: "Ich richte dein Google Business Profil ein und optimiere es. Lokale Kunden finden dich — nicht die Konkurrenz.",
   },
   {
     Icon: EnvelopeSimple,
-    titel: "Kontaktformular & Anfragen",
-    text: "Kunden können direkt Anfragen schicken. Du bekommst eine E-Mail — kein Termin-Chaos mehr.",
-  },
-  {
-    Icon: Lightning,
-    titel: "Schnelle Umsetzung",
-    text: "Vom ersten Gespräch zur fertigen Website in 1 Woche. Kein Hin-und-Her, kein Warten.",
+    titel: "Anfragen direkt aufs Handy",
+    text: "Kunden schicken dir eine Anfrage über deine Website. Du bekommst eine E-Mail. Kein Aufwand, keine Umwege.",
   },
   {
     Icon: Wrench,
-    titel: "Pflege & Updates",
-    text: "Wenn sich etwas ändert — Preise, Leistungen, Fotos — aktualisiere ich das für dich. Schnell und unkompliziert.",
-  },
-  {
-    Icon: DeviceMobile,
-    titel: "Handy-optimiert",
-    text: "Über 70 % deiner Kunden schauen mit dem Handy. Deine Website sieht auf jedem Display perfekt aus.",
+    titel: "Monatliche Betreuung",
+    text: "Ich kümmere mich um Hosting, Updates und Änderungen. Du arbeitest — ich halte deine Website aktuell.",
   },
 ];
 
@@ -108,7 +96,7 @@ export default function Leistungen() {
             color: "#111",
             marginBottom: 20,
           }}>
-            Was du bekommst
+            Was im Paket steckt
           </h2>
 
           <p style={{
@@ -118,7 +106,7 @@ export default function Leistungen() {
             lineHeight: 1.7,
             maxWidth: 300,
           }}>
-            Alles, was ein Handwerksbetrieb braucht, um professionell aufzutreten und neue Kunden zu gewinnen.
+            Alles aus einer Hand. Kein Zusammenstückeln, kein mehrfacher Aufwand.
           </p>
 
           {!isMobile && (
