@@ -2,10 +2,10 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { href: "#leistungen", label: "Leistungen" },
-  { href: "#referenzen", label: "Referenzen" },
-  { href: "#pakete", label: "Pakete" },
-  { href: "#ablauf", label: "Ablauf" },
+  { href: "/#leistungen", label: "Leistungen" },
+  { href: "/#referenzen", label: "Referenzen" },
+  { href: "/#pakete", label: "Pakete" },
+  { href: "/#ablauf", label: "Ablauf" },
 ];
 
 export default function Navbar() {
@@ -57,7 +57,7 @@ export default function Navbar() {
           justifyContent: "space-between",
           alignItems: "center",
         }}>
-          <a href="#" style={{
+          <a href="/" style={{
             fontFamily: "var(--font-heading), sans-serif",
             fontWeight: 700,
             fontSize: 17,
@@ -84,7 +84,7 @@ export default function Navbar() {
 
           {!isMobile && (
             <a
-              href="#kontakt"
+              href="/#kontakt"
               onMouseDown={() => setCtaPressed(true)}
               onMouseUp={() => setCtaPressed(false)}
               onMouseLeave={() => setCtaPressed(false)}
@@ -199,7 +199,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#kontakt"
+            href="/#kontakt"
             onClick={closeMenu}
             style={{
               display: "inline-flex",
