@@ -4,7 +4,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Kontakt() {
   const [isMobile, setIsMobile] = useState(false);
-  const [form, setForm] = useState({ name: "", telefon: "", betrieb: "", nachricht: "" });
+  const [form, setForm] = useState({ name: "", telefon: "", betrieb: "", nachricht: "", website: "" });
   const [gesendet, setGesendet] = useState(false);
   const [laden, setLaden] = useState(false);
   const [fehler, setFehler] = useState("");
@@ -136,12 +136,12 @@ export default function Kontakt() {
                 fontSize: 22,
                 color: "#111",
                 marginBottom: 8,
-              }}>Nachricht erhalten!</h3>
+              }}>Danke für deine Anfrage!</h3>
               <p style={{
                 fontFamily: "var(--font-body), sans-serif",
                 fontSize: 15,
                 color: "#666",
-              }}>Ich melde mich innerhalb von 24 Stunden bei dir. Bis gleich!</p>
+              }}>Danke, ich melde mich binnen 24 Stunden.</p>
             </div>
           </div>
         ) : (
@@ -166,8 +166,30 @@ export default function Kontakt() {
                 display: "flex",
                 flexDirection: "column",
                 gap: 20,
+                position: "relative",
               }}
             >
+              {/* Honeypot — für Menschen unsichtbar, Bots füllen es aus */}
+              <input
+                type="text"
+                name="website"
+                value={form.website}
+                onChange={handleChange}
+                tabIndex={-1}
+                autoComplete="off"
+                style={{
+                  position: "absolute",
+                  width: 1,
+                  height: 1,
+                  padding: 0,
+                  margin: -1,
+                  overflow: "hidden",
+                  clip: "rect(0,0,0,0)",
+                  whiteSpace: "nowrap",
+                  border: 0,
+                }}
+              />
+
               <div style={{
                 display: "grid",
                 gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
