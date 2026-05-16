@@ -287,7 +287,7 @@ export default function Pakete() {
               lineHeight: 1,
               marginBottom: 2,
             }}>
-              99 €
+              149 €
             </div>
             <div style={{
               fontFamily: "var(--font-body), sans-serif",

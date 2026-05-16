@@ -54,7 +54,7 @@ export default function Hero() {
             fontFamily: "var(--font-body), sans-serif",
             marginBottom: 28,
           }}>
-            Web & Automatisierung für Handwerker
+            Websites für Handwerker
           </div>
 
           <h1 style={{
@@ -79,7 +79,7 @@ export default function Hero() {
             maxWidth: 440,
             margin: isMobile ? "0 auto 44px" : "0 0 44px",
           }}>
-            Ich baue professionelle Websites für Handwerksbetriebe — schnell, günstig und ohne technischen Aufwand für dich. Einfach anfragen und in 1 Woche live gehen.
+            Ich baue professionelle Websites für Handwerksbetriebe — schnell, unkompliziert und ohne technischen Aufwand für dich. Einfach anfragen und in 1 Woche live gehen.
           </p>
 
           {/* CTA buttons */}
@@ -221,7 +221,7 @@ export default function Hero() {
                   lineHeight: 1.5,
                   marginBottom: 14,
                 }}>
-                  Professionelle Malerarbeiten im Raum Attendorn
+                  Professionelle Malerarbeiten in Siegen-Wittgenstein
                 </div>
                 <div style={{
                   display: "inline-block",

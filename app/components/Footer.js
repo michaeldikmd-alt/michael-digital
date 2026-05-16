@@ -47,7 +47,7 @@ export default function Footer() {
               lineHeight: 1.65,
               maxWidth: 240,
             }}>
-              Web & Automatisierung für Handwerksbetriebe im Raum Attendorn.
+              Websites für Handwerksbetriebe in Siegen-Wittgenstein.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
                 letterSpacing: "0.08em",
                 marginBottom: 20,
               }}>Navigation</p>
-              {["#leistungen", "#referenzen", "#pakete", "#ablauf", "#kontakt"].map((href) => (
+              {["#leistungen", "#pakete", "#ablauf", "#kontakt"].map((href) => (
                 <a key={href} href={href} style={{
                   display: "block",
                   fontFamily: "var(--font-body), sans-serif",
