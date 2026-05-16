@@ -73,8 +73,8 @@ export default function Pakete() {
           {/* Price split */}
           <div style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "1fr auto 1fr",
-            gap: isMobile ? 32 : 0,
+            gridTemplateColumns: "1fr auto 1fr",
+            gap: 0,
             alignItems: "center",
             marginBottom: 44,
             paddingBottom: 40,
@@ -95,10 +95,11 @@ export default function Pakete() {
               <div style={{
                 fontFamily: "var(--font-heading), sans-serif",
                 fontWeight: 700,
-                fontSize: isMobile ? 44 : 52,
+                fontSize: isMobile ? 28 : 52,
                 color: "#fff",
                 lineHeight: 1,
                 marginBottom: 6,
+                whiteSpace: "nowrap",
               }}>ab 600 €</div>
               <p style={{
                 fontFamily: "var(--font-body), sans-serif",
@@ -108,17 +109,15 @@ export default function Pakete() {
             </div>
 
             {/* Divider */}
-            {!isMobile && (
-              <div style={{
-                width: 1,
-                height: 80,
-                background: "rgba(255,255,255,0.1)",
-                margin: "0 52px",
-              }} />
-            )}
+            <div style={{
+              width: 1,
+              height: 80,
+              background: "rgba(255,255,255,0.1)",
+              margin: isMobile ? "0 20px" : "0 52px",
+            }} />
 
             {/* Betreuung */}
-            <div style={{ textAlign: isMobile ? "left" : "right" }}>
+            <div style={{ textAlign: "right" }}>
               <p style={{
                 fontFamily: "var(--font-body), sans-serif",
                 fontSize: 11,
@@ -131,10 +130,11 @@ export default function Pakete() {
               <div style={{
                 fontFamily: "var(--font-heading), sans-serif",
                 fontWeight: 700,
-                fontSize: isMobile ? 44 : 52,
+                fontSize: isMobile ? 28 : 52,
                 color: "#fff",
                 lineHeight: 1,
                 marginBottom: 6,
+                whiteSpace: "nowrap",
               }}>149 €</div>
               <p style={{
                 fontFamily: "var(--font-body), sans-serif",
