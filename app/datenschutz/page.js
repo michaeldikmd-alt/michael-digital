@@ -2,8 +2,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Datenschutz — Michael Digital",
-  description: "Datenschutzerklärung von Michael Digital",
+  title: "Datenschutzerklärung — Siegen Web",
+  description: "Datenschutzerklärung von Siegen Web, Michael Dik",
 };
 
 export default function Datenschutz() {
@@ -107,9 +107,12 @@ export default function Datenschutz() {
             </p>
           </Section>
 
-          <Section title="6. Keine Cookies, kein Tracking">
+          <Section title="6. Cookies und lokaler Speicher">
             <p>
-              Diese Website verwendet keine Cookies, kein Web-Analytics (z. B. Google Analytics) und kein Tracking. Es werden keine Nutzerprofile erstellt und keine Daten für Werbezwecke verarbeitet.
+              Diese Website verwendet keine Tracking-Cookies, kein Web-Analytics (z. B. Google Analytics) und kein Werbe-Tracking. Es werden keine Nutzerprofile erstellt.
+            </p>
+            <p style={{ marginTop: 12 }}>
+              Zur Speicherung Ihrer Cookie-Einwilligung wird ausschließlich der lokale Speicher Ihres Browsers (<strong>localStorage</strong>) verwendet. Dabei werden keine Daten an Server übertragen. Sie können Ihre Einwilligung jederzeit zurückziehen, indem Sie den lokalen Speicher in Ihrem Browser leeren.
             </p>
           </Section>
 

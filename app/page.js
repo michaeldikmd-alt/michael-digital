@@ -1,10 +1,11 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Leistungen from "./components/Leistungen";
-import Pakete from "./components/Pakete";
 import Ablauf from "./components/Ablauf";
+import Warum from "./components/Warum";
 import Kontakt from "./components/Kontakt";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Leistungen />
-      <Pakete />
       <Ablauf />
+      <Warum />
       <Kontakt />
       <Footer />
+      <CookieBanner />
     </main>
   );
 }

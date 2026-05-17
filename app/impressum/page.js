@@ -2,8 +2,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Impressum — Michael Digital",
-  description: "Impressum von Michael Digital",
+  title: "Impressum — Siegen Web",
+  description: "Impressum von Siegen Web, Michael Dik, Siegen",
 };
 
 export default function Impressum() {

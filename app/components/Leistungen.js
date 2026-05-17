@@ -1,39 +1,116 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import {
-  Globe,
-  MapPin,
-  EnvelopeSimple,
-  Wrench,
-} from "@phosphor-icons/react";
+import { useState, useEffect } from "react";
+import { CheckCircle } from "@phosphor-icons/react";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
-const leistungen = [
-  {
-    Icon: Globe,
-    titel: "Professionelle Website",
-    text: "Mobile-optimiert, schnell, mit deinem Logo, Fotos und Texten. Fertig in 1 Woche — nicht in 3 Monaten.",
-  },
-  {
-    Icon: MapPin,
-    titel: "Google Business Profil",
-    text: "Ich richte dein Google Business Profil ein und optimiere es. Lokale Kunden finden dich — nicht die Konkurrenz.",
-  },
-  {
-    Icon: EnvelopeSimple,
-    titel: "Anfragen direkt aufs Handy",
-    text: "Kunden schicken dir eine Anfrage über deine Website. Du bekommst eine E-Mail. Kein Aufwand, keine Umwege.",
-  },
-  {
-    Icon: Wrench,
-    titel: "Monatliche Betreuung",
-    text: "Ich kümmere mich um Hosting, Updates und Änderungen. Du arbeitest — ich halte deine Website aktuell.",
-  },
+const einrichtung = [
+  "Professionelle, mobiloptimierte Website",
+  "Fertig in 1 Woche",
+  "Google Business Profil einrichten und optimieren",
+  "Kontaktformular — Anfragen kommen direkt aufs Handy",
+  "50% Anzahlung, Rest bei Fertigstellung",
 ];
+
+const betreuung = [
+  "Hosting & Uptime — Website bleibt zuverlässig online",
+  "Technische Updates & Sicherheit",
+  "Inhaltsänderungen auf Wunsch (bis 2× pro Monat)",
+  "WhatsApp-Support Mo–Fr, Antwort innerhalb 1 Werktag",
+  "Google Business Pflege",
+];
+
+function Karte({ titel, punkte, highlight, delay }) {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.12 });
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        background: highlight ? "#111" : "#fff",
+        border: highlight ? "none" : "1px solid var(--border)",
+        borderRadius: 20,
+        padding: "36px 32px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 24,
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(20px)",
+        transition: `opacity 600ms cubic-bezier(0.23, 1, 0.32, 1) ${delay}ms, transform 600ms cubic-bezier(0.23, 1, 0.32, 1) ${delay}ms`,
+      }}
+    >
+      {/* Card label */}
+      <p style={{
+        fontFamily: "var(--font-body), sans-serif",
+        fontSize: 11,
+        fontWeight: 600,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: "var(--accent)",
+        margin: 0,
+      }}>
+        {highlight ? "Monatliche Betreuung" : "Einmalige Einrichtung"}
+      </p>
+
+      <h3 style={{
+        fontFamily: "var(--font-heading), sans-serif",
+        fontWeight: 700,
+        fontSize: 24,
+        color: highlight ? "#fff" : "#111",
+        lineHeight: 1.3,
+        margin: 0,
+      }}>
+        {titel}
+      </h3>
+
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
+        {punkte.map((punkt) => (
+          <li key={punkt} style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 10,
+            fontFamily: "var(--font-body), sans-serif",
+            fontSize: 15,
+            color: highlight ? "rgba(255,255,255,0.8)" : "#444",
+            lineHeight: 1.5,
+          }}>
+            <CheckCircle
+              size={20}
+              weight="fill"
+              color="var(--accent)"
+              style={{ flexShrink: 0, marginTop: 1 }}
+            />
+            {punkt}
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href="#kontakt"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 8,
+          background: highlight ? "var(--accent)" : "var(--bg)",
+          color: highlight ? "#fff" : "#111",
+          border: highlight ? "none" : "1px solid var(--border)",
+          padding: "13px 20px",
+          borderRadius: 100,
+          fontSize: 14,
+          fontWeight: 600,
+          fontFamily: "var(--font-body), sans-serif",
+          marginTop: "auto",
+          minHeight: 48,
+        }}
+      >
+        Termin vereinbaren →
+      </a>
+    </div>
+  );
+}
 
 export default function Leistungen() {
   const [isMobile, setIsMobile] = useState(false);
-  const [visible, setVisible] = useState([]);
-  const itemRefs = useRef([]);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -42,43 +119,15 @@ export default function Leistungen() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  useEffect(() => {
-    const observers = leistungen.map((_, i) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setVisible((prev) => [...prev, i]);
-            observer.disconnect();
-          }
-        },
-        { threshold: 0.15 }
-      );
-      if (itemRefs.current[i]) observer.observe(itemRefs.current[i]);
-      return observer;
-    });
-    return () => observers.forEach((o) => o.disconnect());
-  }, []);
-
   return (
     <section id="leistungen" style={{
-      background: "#fff",
+      background: "var(--bg)",
       padding: isMobile ? "80px 20px" : "120px 40px",
     }}>
-      <div style={{
-        maxWidth: 1100,
-        margin: "0 auto",
-        display: isMobile ? "block" : "grid",
-        gridTemplateColumns: isMobile ? undefined : "340px 1fr",
-        gap: isMobile ? undefined : 80,
-        alignItems: "flex-start",
-      }}>
+      <div style={{ maxWidth: 1000, margin: "0 auto" }}>
 
-        {/* Left: sticky header */}
-        <div style={{
-          position: isMobile ? "static" : "sticky",
-          top: 100,
-          marginBottom: isMobile ? 48 : 0,
-        }}>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: 56 }}>
           <p style={{
             fontFamily: "var(--font-body), sans-serif",
             fontSize: 11,
@@ -88,95 +137,47 @@ export default function Leistungen() {
             textTransform: "uppercase",
             marginBottom: 16,
           }}>Leistungen</p>
-
           <h2 style={{
             fontFamily: "var(--font-heading), sans-serif",
             fontWeight: 700,
             fontSize: isMobile ? 28 : 40,
             color: "#111",
-            marginBottom: 20,
+            marginBottom: 16,
           }}>
-            Was im Paket steckt
+            Einrichtung & Betreuung
           </h2>
-
           <p style={{
             fontFamily: "var(--font-body), sans-serif",
             fontSize: 16,
             color: "#666",
             lineHeight: 1.7,
-            maxWidth: 300,
+            maxWidth: 480,
+            margin: "0 auto",
           }}>
-            Alles aus einer Hand. Kein Zusammenstückeln, kein mehrfacher Aufwand.
+            Du bekommst deine Website und einen Partner, der langfristig dahintersteht.
+            Kein Zusammenstückeln, kein Hin-und-Her.
           </p>
-
-          {!isMobile && (
-            <a href="#kontakt" style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              marginTop: 32,
-              fontFamily: "var(--font-body), sans-serif",
-              fontSize: 14,
-              fontWeight: 600,
-              color: "var(--accent)",
-            }}>
-              Jetzt anfragen
-              <span style={{ fontSize: 16 }}>→</span>
-            </a>
-          )}
         </div>
 
-        {/* Right: feature list */}
-        <div>
-          {leistungen.map(({ Icon, titel, text }, i) => (
-            <div
-              key={titel}
-              ref={(el) => (itemRefs.current[i] = el)}
-              style={{
-                display: "flex",
-                gap: 20,
-                alignItems: "flex-start",
-                padding: "28px 0",
-                borderBottom: i < leistungen.length - 1 ? "1px solid var(--border)" : "none",
-                borderTop: i === 0 ? "1px solid var(--border)" : "none",
-                opacity: visible.includes(i) ? 1 : 0,
-                transform: visible.includes(i) ? "translateY(0)" : "translateY(16px)",
-                transition: `opacity 500ms cubic-bezier(0.23, 1, 0.32, 1) ${i * 60}ms, transform 500ms cubic-bezier(0.23, 1, 0.32, 1) ${i * 60}ms`,
-              }}
-            >
-              <div style={{
-                width: 40,
-                height: 40,
-                borderRadius: 10,
-                background: "var(--bg)",
-                border: "1px solid var(--border)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                marginTop: 2,
-              }}>
-                <Icon size={18} weight="regular" color="var(--accent)" />
-              </div>
-
-              <div>
-                <h3 style={{
-                  fontFamily: "var(--font-heading), sans-serif",
-                  fontWeight: 700,
-                  fontSize: 16,
-                  color: "#111",
-                  marginBottom: 6,
-                }}>{titel}</h3>
-                <p style={{
-                  fontFamily: "var(--font-body), sans-serif",
-                  fontSize: 14,
-                  color: "#666",
-                  lineHeight: 1.65,
-                  maxWidth: 480,
-                }}>{text}</p>
-              </div>
-            </div>
-          ))}
+        {/* Cards */}
+        <div style={{
+          display: isMobile ? "flex" : "grid",
+          flexDirection: isMobile ? "column" : undefined,
+          gridTemplateColumns: isMobile ? undefined : "1fr 1fr",
+          gap: 20,
+        }}>
+          <Karte
+            titel="Website, Google Business & Kontaktformular"
+            punkte={einrichtung}
+            highlight={false}
+            delay={0}
+          />
+          <Karte
+            titel="Alles läuft — auch wenn du nicht dran denkst"
+            punkte={betreuung}
+            highlight={true}
+            delay={100}
+          />
         </div>
       </div>
     </section>
