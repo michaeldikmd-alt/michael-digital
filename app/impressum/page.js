@@ -29,7 +29,7 @@ export default function Impressum() {
             Impressum
           </h1>
 
-          <Section title="Angaben gemäß § 5 TMG">
+          <Section title="Angaben gemäß § 5 DDG">
             <p>Michael Dik</p>
             <p>Gleiwitzer Straße 4</p>
             <p>57072 Siegen</p>
@@ -40,19 +40,9 @@ export default function Impressum() {
             <Row label="E-Mail" value="info@siegen-web.de" />
           </Section>
 
-          <Section title="Steuerliche Angaben">
-            <Row label="Steuernummer" value="342/5054/4631" />
-          </Section>
-
-          <Section title="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV">
-            <p>Michael Dik</p>
-            <p>Gleiwitzer Straße 4</p>
-            <p>57072 Siegen</p>
-          </Section>
-
           <Section title="Haftungsausschluss">
             <p style={{ lineHeight: 1.75, color: "#555", fontSize: 15 }}>
-              Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+              Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
             </p>
           </Section>
 

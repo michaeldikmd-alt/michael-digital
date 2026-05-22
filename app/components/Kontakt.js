@@ -339,7 +339,11 @@ export default function Kontakt() {
                     color: "#666",
                     lineHeight: 1.6,
                   }}>
-                    Ich stimme zu, dass die in das Formular eingegebenen Daten verarbeitet und zur Kontaktaufnahme verwendet werden können.*
+                    Ich habe die{" "}
+                    <a href="/datenschutz" style={{ color: "var(--accent)", textDecoration: "underline" }}>
+                      Datenschutzhinweise
+                    </a>
+                    {" "}zur Kontaktaufnahme gelesen und stimme der Verarbeitung meiner Daten zu.*
                   </span>
                 </label>
 

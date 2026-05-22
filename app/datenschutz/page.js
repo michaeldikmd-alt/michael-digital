@@ -52,7 +52,7 @@ export default function Datenschutz() {
 
           <Section title="2. Erhebung und Verarbeitung personenbezogener Daten">
             <p>
-              Ich erhebe personenbezogene Daten nur, soweit dies zur Bereitstellung meiner Dienstleistungen erforderlich ist. Dies geschieht ausschließlich über das Kontaktformular auf dieser Website.
+              Ich erhebe personenbezogene Daten nur, soweit dies zur Bereitstellung meiner Dienstleistungen erforderlich ist. Dies geschieht insbesondere über das Kontaktformular, per E-Mail, Telefon sowie technisch durch den Hosting-Anbieter.
             </p>
           </Section>
 
@@ -62,11 +62,13 @@ export default function Datenschutz() {
             </p>
             <ul style={{ paddingLeft: 20, marginTop: 8, display: "flex", flexDirection: "column", gap: 4 }}>
               <li>Name</li>
-              <li>Telefonnummer (freiwillig)</li>
-              <li>Nachricht</li>
+              <li>Telefonnummer (Pflichtfeld)</li>
+              <li>E-Mail-Adresse</li>
+              <li>Gewünschte Erreichbarkeit</li>
+              <li>Projektinfo/Nachricht (freiwillig)</li>
             </ul>
             <p style={{ marginTop: 12 }}>
-              Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Die Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).
+              Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Eine Weitergabe zu Werbezwecken an Dritte erfolgt nicht. Zur technischen Bereitstellung werden Auftragsverarbeiter eingesetzt (siehe Abschnitte 4 und 5). Die Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).
             </p>
             <p style={{ marginTop: 12 }}>
               Die Daten werden gelöscht, sobald sie für den Zweck ihrer Erhebung nicht mehr erforderlich sind, spätestens jedoch nach 6 Monaten.
@@ -105,14 +107,17 @@ export default function Datenschutz() {
                 vercel.com/legal/privacy-policy
               </a>
             </p>
+            <p style={{ marginTop: 12 }}>
+              Die Verarbeitung erfolgt auf Basis eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO. Vercel Inc. sitzt in den USA; die Übermittlung erfolgt auf Basis des EU-U.S. Data Privacy Framework.
+            </p>
           </Section>
 
-          <Section title="6. Cookies und lokaler Speicher">
+          <Section title="6. Keine Cookies, kein Tracking">
             <p>
-              Diese Website verwendet keine Tracking-Cookies, kein Web-Analytics (z. B. Google Analytics) und kein Werbe-Tracking. Es werden keine Nutzerprofile erstellt.
+              Diese Website verwendet keine Cookies, kein Web-Analytics (z. B. Google Analytics) und kein Tracking. Es werden keine Nutzerprofile erstellt und keine Daten für Werbezwecke verarbeitet.
             </p>
             <p style={{ marginTop: 12 }}>
-              Zur Speicherung Ihrer Cookie-Einwilligung wird ausschließlich der lokale Speicher Ihres Browsers (<strong>localStorage</strong>) verwendet. Dabei werden keine Daten an Server übertragen. Sie können Ihre Einwilligung jederzeit zurückziehen, indem Sie den lokalen Speicher in Ihrem Browser leeren.
+              Da keine Tracking-Tools oder einwilligungspflichtige Dienste eingesetzt werden, ist kein Cookie-Consent-Banner erforderlich.
             </p>
           </Section>
 
