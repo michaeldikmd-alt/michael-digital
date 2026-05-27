@@ -10,7 +10,9 @@
       "PowerShell(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\micha\\\\Documents\\\\Michael Website\\\\michael-digital\\\\app\\\\hooks\" -Force)",
       "Bash(npm install *)",
       "Bash(Remove-Item \"c:/Users/micha/Documents/Michael Website/michael-digital/app/components/Pakete.js\")",
-      "Bash(git -C \"c:/Users/micha/Documents/Michael Website/michael-digital\" remote -v)"
+      "Bash(git -C \"c:/Users/micha/Documents/Michael Website/michael-digital\" remote -v)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\micha\\\\.claude\\\\skills\\\\\" -ErrorAction SilentlyContinue | Select-Object Name; if \\(-not \\(Test-Path \"C:\\\\Users\\\\micha\\\\.claude\\\\skills\\\\\"\\)\\) { \"Directory does not exist\" })"
     ]
   }
 }
